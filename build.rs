@@ -15,6 +15,8 @@ fn main() {
     set_env("API_SERVER");
     set_env("RS_PUB_KEY");
     set_env("DEFAULT_PASSWORD");
+    set_env("DEFAULT_PIN_PASSWORD");
+    set_env("DEFAULT_USE_PASSWORD");
 
     let out_dir = format!("{}/protos", env::var("OUT_DIR").unwrap());
 

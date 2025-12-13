@@ -95,7 +95,7 @@ lazy_static::lazy_static! {
         //PIN解锁，下方有部分修复改功能代码，读取Repository secrets值
         map.insert(
             "unlock_pin".to_string(), 
-            option_env!("DEFAULT_PASSWORD").unwrap_or("").into()
+            option_env!("DEFAULT_PIN_PASSWORD").unwrap_or("").into()
         );
         //使用DirectX捕获屏幕
         map.insert("enable-directx-capture".to_string(), "Y".to_string());
@@ -158,7 +158,7 @@ lazy_static::lazy_static! {
         //默认连接密码，请求控制的时候要求输入的密码，读取Repository secrets值
         map.insert(
             "default-connect-password".to_string(), 
-            option_env!("DEFAULT_PASSWORD").unwrap_or("").into()
+            option_env!("DEFAULT_USE_PASSWORD").unwrap_or("").into()
         );
         //隐藏远程打印设置选项
         map.insert("hide-remote-printer-settings".to_string(), "N".to_string());
