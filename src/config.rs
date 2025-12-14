@@ -80,7 +80,7 @@ lazy_static::lazy_static! {
         //中继服务器，读取Repository secrets值
         map.insert(
             "relay-server".to_string(), 
-            option_env!("RELAY_SERVER").unwrap_or("rs-ny.rustdesk.com").into()
+            option_env!("RELAY_SERVER").unwrap_or("").into()
         );
         //API服务器，读取Repository secrets值
         map.insert(
